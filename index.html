@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by TraiShaun Johnson</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+<head>
+<script>
+   function myFunction()
+   {
+       document.body.innerHTML = '';
+       var miles= prompt("Please enter your estimated number of miles per year.");
+       var price=prompt("Please enter current cost of a gallon of gasoline.")
+       document.write("To drive a car with an MPG rating of 12 for "+miles+" miles at $"+price+" per gallon would cost "+calculateCost(miles,price,12).toFixed(2));
+       document.write("</br>To drive a car with an MPG rating of 17 for "+miles+" miles at $"+price+" per gallon would cost "+calculateCost(miles,price,17).toFixed(2));
+       document.write("</br>To drive a car with an MPG rating of 26 for "+miles+" miles at $"+price+" per gallon would cost "+calculateCost(miles,price,26).toFixed(2));
+       document.write("</br>To drive a car with an MPG rating of 29 for "+miles+" miles at $"+price+" per gallon would cost "+calculateCost(miles,price,29).toFixed(2));
+       document.write("</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type='button' value='Repeat calculation' onclick='myFunction()'>")
+   }
+   function calculateCost(mile,price,mpg)
+   {
+       var totalGasoline=mile/mpg;
+       var cost=totalGasoline*price;
+       return cost;
+   }
+</script>
+</head>
+<body onload="myFunction()">
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
